@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Angler — every fish in Stardew Valley</title>
+<meta name="description" content="A checklist of all 72 fish needed for the Master Angler achievement in Stardew Valley 1.6, with season, location, time and weather for each — plus which ones the Community Center wants.">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Master Angler — every fish in Stardew Valley">
+<meta property="og:description" content="All 72 fish, grouped by where you'd actually go to catch them. Tick them off as you land them.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230E2029'/%3E%3Cpath d='M3 8l3-3v2h5l2-2v6l-2-2H6v2z' fill='%2395D94F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">Stardew Valley 1.6 · Collections › Fish</p>
+      <h1>Master Angler<span class="sub">all 72 · Willy mails a Stardrop</span></h1>
+      <p class="blurb">Every entry in your Fish collection tab, grouped by where you'd actually go to catch it. Tick them off as you land them — this page remembers.</p>
+    </div>
+    <div class="meter">
+      <div class="meter-head"><span>Catch progress</span><span id="pct">0%</span></div>
+      <div class="catchbar"><div class="catchbar-fill" id="fill"></div><div class="catchbar-ticks"></div></div>
+      <div class="meter-count"><b id="caught">0</b><span class="of"> / 72</span></div>
+      <div class="perfect">Perfect!</div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="filters" id="seasonFilters">
+      <button class="chip" data-season="spring" aria-pressed="false">Spring</button>
+      <button class="chip" data-season="summer" aria-pressed="false">Summer</button>
+      <button class="chip" data-season="fall" aria-pressed="false">Fall</button>
+      <button class="chip" data-season="winter" aria-pressed="false">Winter</button>
+    </div>
+    <input class="search" id="search" type="search" placeholder="Find a fish or place…" aria-label="Search fish or location">
+    <div class="toggles">
+      <label class="tog"><input type="checkbox" id="hideCaught"> Hide caught</label>
+      <label class="tog"><input type="checkbox" id="bundleOnly"> Bundle fish only</label>
+    </div>
+  </div>
+
+  <main id="list"></main>
+  <p class="empty" id="empty">No fish match those filters. Clear a filter to see more.</p>
+
+  <section class="cc">
+    <h2>Community Center</h2>
+    <p class="cc-intro">Six bundles need fish. Five sit in the <strong>Fish Tank</strong>; the sixth catch, <strong>Chub</strong>, hides in the Field Research Bundle on the Bulletin Board. Finishing the Fish Tank clears the glittering boulder by the mine and earns you Willy's copper pan. These tick themselves as you check fish off above.</p>
+    <div class="bundles" id="bundles"></div>
+  </section>
+
+  <footer class="foot">
+    <p>Fish data from the <a href="https://stardewvalleywiki.com/Fish">Stardew Valley Wiki</a> (game version 1.6). Ginger Island removes most season locks — miss a window and you can catch it there year-round. The five Extended Family fish from Mr.&nbsp;Qi's quest are <em>not</em> needed for the achievement. If you started your save with remixed bundles on, your Community Center list will differ from the one above.</p>
+    <div class="actions">
+      <span id="status"></span>
+      <button class="ghost" id="export">Copy backup</button>
+      <button class="ghost" id="import">Restore backup</button>
+      <button class="ghost danger" id="reset">Clear all</button>
+    </div>
+  </footer>
+
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
